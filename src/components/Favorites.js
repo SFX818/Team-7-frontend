@@ -8,7 +8,8 @@ const Favorites = () => {
     // const [favorites, setFavorites]= useState([])
     const currentUser = getCurrentUser()
     const id = currentUser.id
-
+    console.log(currentUser.id)
+    
     const favePosts = () => {
         viewFavoritePosts(id).then(user => {
             console.log(user.data)
@@ -24,17 +25,7 @@ const Favorites = () => {
     }
 
 
-// const displayFavePost = () => {
-//     favePosts()
-//     console.log(favePosts())
-//   return(
-//     <ul>
-//     <li>{favorites}</li>
-//     </ul>
-//   )
-// }
 
-//     // function that returns list of favePosts
 
 
 return <div>
