@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Post from './Post'
 
 const UserProfile = (props) => {
+    
     const [user, setUser] = useState({})
     setUser(props.user)
     return (
