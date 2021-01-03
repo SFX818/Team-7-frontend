@@ -23,11 +23,12 @@ const Favorites = () => {
     async function favePosts() {
       return await viewFavoritePosts(id).then(user => {
             setLoading(false)
-            console.log(user.data.favoritePosts)
+            console.log("the obj we map",user.data.favoritePosts)
             return user.data.favoritePosts.map(post => (
                 <ul>
                     <li key={post._id}>
-                        {post.body}
+                       <div> Username: {post.creator[0].username}</div>
+                        <div>Body: {post.body}</div>
                     </li>
                 </ul>
             ))
