@@ -4,8 +4,8 @@ import React, { useEffect, useState } from 'react'
 import { viewFavoritePosts } from '../services/post.service'
 import { getCurrentUser } from '../services/auth.service'
 
-const Favorites = (props) => {
-    console.log("what are props", props)
+const Favorites = () => {
+   
     const [favorites, setFavorites]= useState([])
     const currentUser = getCurrentUser()
     const id = currentUser.id
