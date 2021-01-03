@@ -2,7 +2,7 @@
 import React, {useState, useEffect} from 'react'
 import PostForm from "./PostForm"
 import Searchbar from "./Searchbar"
-// import Post from "./Post"
+import Post from "./Post"
 import {viewAllPosts} from '../services/post.service.js'
 
 
@@ -11,7 +11,7 @@ const Home = (props) => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:8080/api/posts/feed').
+        viewAllPosts().
         then((response) => {
             setPosts(response.data)
         }).catch(err => {
