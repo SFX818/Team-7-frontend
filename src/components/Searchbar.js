@@ -76,8 +76,9 @@ const Searchbar = () => {
         </form>
         <ul>
             Users:
-            {users.map(result => {
-                return <li>{result.username}</li>
+            {posts.map(result => {
+                console.log("this is the user", result)
+                return <li>{result.creator[0].username}</li>
             })}
         </ul>
         <ul>
