@@ -132,15 +132,7 @@ const UserProfile = (props) => {
                         
                         {userInfo.posts.map((post, index) => {
                             {console.log(post)}
-<<<<<<< HEAD
                             return <Post post={post} />
-=======
-                            return  <ul class="list-group">
-                                    {/* <li>Creator: {post.username}</li> */}
-                                     <li class="list-group-item mb-2" key={post._id}>{post.body}</li>
-                                </ul>
-                            {/* return <Post post={post} /> */}
->>>>>>> bfcda87... removed changes to user profile for now due to merge conflict
                             
                             
                         })}
