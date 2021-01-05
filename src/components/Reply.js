@@ -9,10 +9,10 @@ import { viewOnePost } from '../services/post.service'
 
 
 
-const Reply = (parentPost) => {
+const Reply = (props) => {
     const currentUser = getCurrentUser()
     const [mainPost, setMainPost] = useState("")
-    // const parentPost = props.location.parentPost
+    const parentPost = props.location.state
     console.log("parentPost", parentPost)
 //     //props passes paretPost from link in Post.js
     

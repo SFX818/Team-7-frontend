@@ -165,56 +165,12 @@ const Post = (props) => {
                         <Button label="Retweet" handleClick={retweet} />
                     )}
                 </div>)}
-                {/* {userFave && (
-            <Button label="Unfavorite" handleClick={unfavorite} />
-        )} */}
             <Link to={{
                 pathname: "/Reply",
                 state: postInfo._id
                 }} className="nav-link">Replies</Link>
         </div>
         )   
-
-
-
-     
-   
-
-
-    // //helper functions
-    // return (
-    // <div>
-    // {/* determine how to render post based on booleans */}
-    // {post.isRepost && (
-    //     <span>Repost from {post.parentPost.creator}</span>
-    // )}
-
-    // {post.isReply && (
-    //     <span>Replied to {post.parentPost.creator}</span>
-    // )}
-
-    // {/*Link to view author profile */}
-    // {/* <Link to={`/profile/${props.creator.username}`}>{props.creator.username}</Link> */}
-
-    // {/* Post body */}
-    // <p>{props.body}</p>
-
-    // {/* button for favorite */}
-    //     <Button label='Favorite' handleClick={incrementFavorite}/>
-
-    // {/* reply form */}
-    // {/* <form onSubmit={replyToPost}>
-    //     <label>
-    //       Reply
-    //       <input type="text" value={this.state.value} onChange={this.handleReplyChange} />
-    //     </label>
-    //     <input type="submit" value="Reply" />
-    // </form> */}
-
-    // {/* button for repost */}
-    //     <Button label='Repost' handleClick={retweetPost}/>
-
-    // </div>
 }
 
 export default Post
