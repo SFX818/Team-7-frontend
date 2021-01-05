@@ -164,7 +164,6 @@ const Post = (props) => {
                     {!retweeted && (
                         <Button label="Retweet" handleClick={retweet} />
                     )}
-                    <Link to={"/Reply"} className="nav-link">Replies</Link>
                 </div>)}
                 {/* {userFave && (
             <Button label="Unfavorite" handleClick={unfavorite} />
