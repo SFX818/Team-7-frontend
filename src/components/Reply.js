@@ -53,31 +53,6 @@ const getRepliesArray = () => {
         }, [])
 
     
-        // const getOnePost = () => {
-           
-        // }
-        
-       
-    
-    // const currentUser = getCurrentUser()
-    // 
-    // const singlePost = viewOnePost(parentPost)
-    // // set the reply
-    // const [replies, setReplies] = useState([])
-    // const [mainPost, setMainPost] = useState("")
-    
-
-    // console.log("parentPost", parentPost)
-
-    // useEffect(() => {
-    //     setMainPost(singlePost)
-    //     console.log("mainPost", mainPost)
-    //     setReplies(singlePost.replies)
-    // }, [])
-
-
-
-    
     return (
         <div>
             

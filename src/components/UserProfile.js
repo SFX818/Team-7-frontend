@@ -51,10 +51,10 @@ const UserProfile = (props) => {
             const userInfo = user.data
             console.log(userInfo)
             return (
-                <div className = "container">
+                <div class = "container">
                     
-                    <div className = "card">
-                        <h2 className = "nav-link">
+                    <div class = "card">
+                        <h2 class = "nav-link">
                             <strong>User Information</strong>
                         </h2>
 
@@ -65,19 +65,19 @@ const UserProfile = (props) => {
                             className="nav-link"
                             />
                             <h3>
-                            <strong className = "nav-link">{userInfo.username}</strong>
+                            <strong class = "nav-link">{userInfo.username}</strong>
                             </h3>
                         </div>
                         
                         <div>
-                            <Link to={"/favorites"} className = "nav-link">Favorite Posts</Link>
+                            <Link to={"/favorites"} class = "nav-link">Favorite Posts</Link>
                         </div>
 
                         <div>
-                          <Link to={"/following"} className = "nav-link">Following Feed</Link>
+                          <Link to={"/following"} class = "nav-link">Following Feed</Link>
                         </div>
                     
-                        <div className = "nav-link">
+                        <div class = "nav-link">
                             {!follows && (
                                 <Button label="Follow" handleClick={follow} class="btn btn-primary mt-4"/>
                             )}
@@ -88,18 +88,18 @@ const UserProfile = (props) => {
                         </div>
                     </div>
 
-                    <div className = "card">
-                        <h4 className="nav-link">
+                    <div class = "card">
+                        <h4 class="nav-link">
                             <strong>Currently Following</strong>
                         </h4>
                     
                     {userInfo.followed.map((followed, index) => {
                         if (followed === null){
-                            return <div className="nav-link">You are not following anyone yet.</div>
+                            return <div class="nav-link">You are not following anyone yet.</div>
                    
                         }else {
-                            return  <ul className="list-unstyled">
-                            <li className="nav-link" key={index}>{followed.username}</li>
+                            return  <ul class="list-unstyled">
+                            <li class="nav-link" key={index}>{followed.username}</li>
                             {/* return <Post post={post} /> */}
                        </ul>
                             
@@ -107,8 +107,8 @@ const UserProfile = (props) => {
                             
                         })}
                     </div>
-                    <div className = "card">
-                        <h4 className ="nav-link">
+                    <div class = "card">
+                        <h4 class="nav-link">
                             <strong>Current Followers</strong>
                         </h4>
                     {userInfo.followers.map((followers, index) => {
@@ -117,22 +117,30 @@ const UserProfile = (props) => {
                             return <div class="nav-link">You have no followers yet.</div>
                         }else {
                             return  <div>
-                            <ul className="list-unstyled">
-                            <li className="nav-link" key={index}>{followers.username}</li>
+                            <ul class="list-unstyled">
+                            <li class="nav-link" key={index}>{followers.username}</li>
                             {/* // return <Post post={post} /> */}
                        </ul>
                             </div>
                         }
                         })}
                     </div>
-                    <div className = "card">
-                        <h4 className="nav-link">
+                    <div class = "card">
+                        <h4 class="nav-link">
                             <strong>Posts</strong>
                         </h4>
                         
                         {userInfo.posts.map((post, index) => {
                             {console.log(post)}
+<<<<<<< HEAD
                             return <Post post={post} />
+=======
+                            return  <ul class="list-group">
+                                    {/* <li>Creator: {post.username}</li> */}
+                                     <li class="list-group-item mb-2" key={post._id}>{post.body}</li>
+                                </ul>
+                            {/* return <Post post={post} /> */}
+>>>>>>> bfcda87... removed changes to user profile for now due to merge conflict
                             
                             
                         })}
