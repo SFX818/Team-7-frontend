@@ -32,7 +32,7 @@ const Post = (props) => {
     let favoritesComponent = props.favoritesComponent
 
     useEffect(() => {
-        if (currentUser && postInfo.creator[0].followers.includes(currentUser.id)) {
+        if (currentUser && postInfo.creator[0].followers && postInfo.creator[0].followers.includes(currentUser.id)) {
             setFollows(true)
         } else {
             setFollows(false)

@@ -11,30 +11,37 @@ const Reply = () => {
     const {idx}= useParams()
     const [mainPost, setMainPost] = useState([])
     const [repliesArray, setRepliesArray] = useState([])
-   
+    // console.log("viewOnePost",viewOnePost(idx))
    console.log("idx", idx)
     
         console.log("RERENDER HOME")
+
+        viewOnePost(idx)
+        .then((response) => {
+            console.log("response", response)
+            setMainPost(response.data)
+            console.log("mainPost", mainPost)
+            const userReplies = response.data[0].replies.reverse().map((reply, index) => {
+                console.log("reply", reply)
+                
+                return <Post post={reply} />    
+            })
+            setRepliesArray(userReplies)
+        })
+
        
         useEffect(() => {
             console.log("are we in here at all?")
-            viewOnePost(idx).
-            then((response) => {
-                console.log("response", response)
-                setMainPost(response.data)
-            }).catch(err => {
-                console.log(err)
-            })
-        }, [idx])
+            
+            
+        }, [])
 
     
-        // const rerenderHome = () => {
-        //     setUpdate(update+1)
+        // const getOnePost = () => {
+           
         // }
         
-        // const userReplies = mainPost.replies.reverse().map((reply, index) => {
-        //     return <Post post={reply} rerenderHome={rerenderHome} />    
-        // })
+       
     
     // const currentUser = getCurrentUser()
     // 
@@ -57,9 +64,9 @@ const Reply = () => {
     
     return (
         <div>
-        <Post post={mainPost} /> 
+        {/* <Post post={mainPost} />  */}
         <PostForm parentPost={idx} />
-        {/* {userReplies} */}
+        {repliesArray}
        
         </div>
         )
