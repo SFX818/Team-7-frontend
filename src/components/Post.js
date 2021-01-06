@@ -132,7 +132,7 @@ const Post = (props) => {
                         <div className="card-body">
                             <div className="card-title">
                                 <Link to={urlId}>
-                                    <strong>{postInfo.creator[0].username}</strong>
+                                    <div>{postInfo.creator[0].username}</div>
                                 </Link>
                             </div>
                             <p className="card-text">{postInfo.body}</p>
@@ -166,8 +166,8 @@ const Post = (props) => {
                                         )} */}
                                         {!original && (
                                             <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-                                                <Button className="btn btn-primary me-md-2" type="button" label="Delete" handleClick={deletePage} />
-                                                <Button className="btn btn-primary" type="button" label="Edit" handleClick={editPost} />
+                                                <Button className="btn btn-primary" type="button" label="Delete" handleClick={deletePage} />
+                                                <Button className="btn btn-primary" type="button" label="Edit" handleClick={editPost}/> 
                                             </div>
                                         )}
                                     </div>
@@ -179,11 +179,13 @@ const Post = (props) => {
 
                     </div>)}
                 <div >
+                <div class="container">
                     <div className="card-body row">
-                        <div className="col-md-6 col-sm-6">Favorites: {favorites}</div>
+                        <div className="col-sm">Favorites: {favorites}</div>
                         {retweeted && (
-                            <div className="col-md-6 col-sm-6">Retweets: {numretweet}</div>
+                            <div className="col-sm">Retweets: {numretweet}</div>
                         )}
+                        <div className="col-sm">
                         <Link
                             to={{
                                 pathname: `/reply/${postInfo._id}`,
@@ -193,6 +195,8 @@ const Post = (props) => {
                         >
                             {postInfo.replies.length} Replies
                         </Link>
+                        </div>
+                    </div>
                     </div>
                 </div>
 
