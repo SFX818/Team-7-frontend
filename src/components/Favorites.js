@@ -24,7 +24,7 @@ const Favorites = () => {
         viewFavoritePosts(id).then(user => {
             let favesArray = user.data.favoritePosts
             setFavorites(favesArray)
-            console.log(favesArray)
+            // console.log(favesArray)
             return favesArray
             
         })

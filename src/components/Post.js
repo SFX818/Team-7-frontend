@@ -205,7 +205,7 @@ const Post = (props) => {
 
                     </div>)}
                 <div >
-                <div class="container .ps-2">
+                <div className="container .ps-2">
                     {exists && (
                     <div className="card-body row  p-0">
                         <div className="col-sm p-2">Favorites: {favorites}</div>

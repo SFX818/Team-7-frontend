@@ -29,7 +29,7 @@ const Layout = (props) => {
   let profUrl = null
 
   if (currentUser){
-    console.log('/userProfile/' + currentUser.id)
+    // console.log('/userProfile/' + currentUser.id)
     profUrl = '/userProfile/' + currentUser.id
   }
 
