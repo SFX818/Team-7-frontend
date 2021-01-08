@@ -37,7 +37,6 @@ const Layout = (props) => {
     <div>
       <nav className="navbar navbar-expand sticky-top navbar-dark bg-primary">
         <Link to="/" className="navbar-brand">
-        <i class="fab fa-earlybirds"></i>
           Chirper
         </Link>
         <div className="navbar-nav nav-tabs mr-auto">

@@ -10,7 +10,6 @@ import Post from './Post'
 import { useParams } from "react-router";
 import { followUser, unfollowUser } from '../services/user.service.js'
 import { uploadImage } from '../services/user.service.js'
-const axios = require('axios')
 
 
 
@@ -73,6 +72,7 @@ const UserProfile = (props) => {
                 base64EncodedImage = Buffer.from(user.data.profilePic[0].img.data.data).toString('base64')
             }
             const imageSrc = `data:image/jpeg;base64, ${base64EncodedImage}`
+
             return (
                 <div className="container">
 
@@ -94,12 +94,12 @@ const UserProfile = (props) => {
                                     alt="profile-img"
                                     className="nav-link"
                                 />)}
-
+                        {current === true && (
+                            <input type="file" accept="image/*" onChange={handleImageUpload} multiple={false} />
+                        )} 
                         </div>
 
-                        {current && (
-                            <input type="file" accept="image/*" onChange={handleImageUpload} multiple={false} />
-                        )}
+                        
 
                         <div>
                             <Link to={"/favorites"} className="nav-link">Favorite Posts</Link>
