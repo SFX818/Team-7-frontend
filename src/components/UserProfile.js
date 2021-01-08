@@ -56,11 +56,6 @@ const UserProfile = (props) => {
         uploadImage(id, e.target.files[0])
         // formData.append("userPhoto", file)
         console.log("files for pic?", e.target.files[0])
-        // axios.post('http://localhost:8080/api/photo', formData, {
-        //     headers: {
-        //         'Content-Type': 'multipart/form-data'
-        //     }
-        // })
 
     }
 
